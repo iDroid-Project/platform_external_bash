@@ -38,7 +38,10 @@ LOCAL_STATIC_LIBRARIES += \
 	libreadline \
 	libclearsilverregex
 LOCAL_MODULE := bash
-LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+# This probably needs to go in both places - for now it can go into the ramdisk image - fix this later....
+#LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+LOCAL_MODULE_PATH := $(TARGET_ROOT_OUT_SBIN) 
+LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_SBIN_UNSTRIPPED) 
 
 LOCAL_MODULE_TAGS := eng
 
